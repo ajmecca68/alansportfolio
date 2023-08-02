@@ -289,4 +289,12 @@ header nav li a {
     
   }
   
-  
+  @media screen and (max-width: 410px) {
+    .hero-text {
+        font-size: 60%;
+    }
+
+    .hero {
+        height: 100px;
+    }
+  }
