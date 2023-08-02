@@ -1,20 +1,22 @@
 
 :root {
-    --blue: #13293d;
-    --white: #fff;
-    --border-radius: 50px 50px 0 0;
+    --dark: #1b1717;
+    --light: #f5ebeb;
+    --orange: #dd8a1c;
+    --border-radius: 6px;
+    --font: "Open Sans", Arial;
   }
 
 
 body {
-    background-color: #d9dcd6;
+    background-color: var(--light);
     overflow: auto;
     font-family: "Open Sans", Arial;
 }
 
 main {
     margin: 15px;
-    color:rgb(194, 138, 73);
+    color: var(--orange);
 }
   
   /* Displaying header */
@@ -23,7 +25,7 @@ header {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    background-color: rgb(0, 0, 0); 
+    background-color: var(--dark);
     width: 100%;
     position: sticky; 
     top: 0;
@@ -32,7 +34,7 @@ header {
   /* setting logo parameters */
 .logo {
     padding-left: 20px;
-    background-color: #dd8a1c;
+    background-color: var(--orange);
 }
 
 .logo img {
@@ -48,7 +50,7 @@ header {
     background-image: url("../images/subtitle-image.png"); 
     background-size: cover;
     background-position: center;
-    color: #d9dcd6;
+    color: var(--light);
     position: relative;
 }
 
@@ -58,7 +60,7 @@ header {
     right: 0px;
     bottom: 50px;
     padding: 0px 30px 0px 30px;
-    background-color: #dd8a1c;
+    background-color: var(--orange);
 }
 
 .hero h1 {
@@ -85,30 +87,36 @@ header nav li {
     margin-right: 20px;
     font-size: 25px;
     font-weight: bold;
-    border-bottom: 3px solid #dd8a1c;
+    border-bottom: 3px solid var(--orange);
 
 }
   
 header nav li a {
     text-decoration: none;
-    color: rgb(248, 250, 251);
+    color: var(--light);
 }
 
+.row {
+    padding-top: 150px;
+    margin-top: -150px;
+}
 /* Create two unequal columns that floats next to each other */
 .column {
     float: left;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
    /* height: 300px;  Should be removed. Only for demonstration */
   }
   
 .left {
     width: 20%;
     text-align: right;
+    font-size: 150%;
+    vertical-align: top;
   }
   
 .right {
     width: 75%;
-    border-left: 6px solid black;
+    border-left: 6px solid var(--dark);
   }
   
 .work {
@@ -123,12 +131,14 @@ header nav li a {
     display: inline-block;
     font-family: "Open Sans", Arial;
     font-size: 20px;
-    color: #FFF;
+    color: var(--light);
     text-align: center;
     border-radius: 6px;
     padding: 2px;
     margin: 6px;
-    border: 3px solid black;
+    border: 3px solid var(--dark);
+    position: relative;
+    text-align: center;
   }
   
 .work-image:first-child {
@@ -139,27 +149,18 @@ header nav li a {
     flex: 1;
   }
 
-.work-image:not(:first-child) img {
-    max-width: 100%;
-  }
-
-  .work-image img {
+.work-image img {
     width: 100%;
     height: 100%;
     border-radius: 6px;
-  }
-
-.work-image {
-    position: relative;
-    text-align: center;
-    color: rgb(255, 255, 255);
+    opacity: .8;
   }
 
 .text-tag {
     position: absolute;
     bottom: 70px;
     left: 0px;
-    background-color: #dd8a1c;
+    background-color: var(--orange);
     padding: 10px;
   }
 
@@ -170,7 +171,12 @@ header nav li a {
     -webkit-transition:.5s;
     transition:.5s;
     box-shadow: 10px 10px 5px #888888;
+    opacity: 1;
   }
+
+#resume .right img {
+    height: 300px;
+}
 
   /* Clear floats after the columns */
 .row:after {
@@ -196,12 +202,75 @@ header nav li a {
 }
   
 .right nav li a {
-    color: rgb(0, 0, 0);
+    color: var(--dark);
     text-decoration: none;
-    border-bottom: #dd8a1c 3px solid;
+    border-bottom: var(--orange) 3px solid;
 }
 
-#resume .right img {
-    height: 300px;
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: var(--font);
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--light);
 }
 
+
+.footer h2 {
+    font-size: 20px;
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-text {
+        font-size: 80%;
+    }
+    .work {
+        flex-direction: column;
+
+    }
+
+    .work-image {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .work-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        opacity: .8;
+      }
+    
+    .right nav ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .left {
+        width: 100%;
+        text-align: center;
+        vertical-align: top;
+      }
+    
+    .right {
+        border-left: none;
+        border-top: 6px solid var(--dark);
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    
+  }
+  
+  
