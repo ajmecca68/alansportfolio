@@ -1,0 +1,207 @@
+
+:root {
+    --blue: #13293d;
+    --white: #fff;
+    --border-radius: 50px 50px 0 0;
+  }
+
+
+body {
+    background-color: #d9dcd6;
+    overflow: auto;
+    font-family: "Open Sans", Arial;
+}
+
+main {
+    margin: 15px;
+    color:rgb(194, 138, 73);
+}
+  
+  /* Displaying header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(0, 0, 0); 
+    width: 100%;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+  /* setting logo parameters */
+.logo {
+    padding-left: 20px;
+    background-color: #dd8a1c;
+}
+
+.logo img {
+    height: 4em;
+
+}
+
+.hero {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-top: 80px;
+    background-image: url("../images/subtitle-image.png"); 
+    background-size: cover;
+    background-position: center;
+    color: #d9dcd6;
+    position: relative;
+}
+
+.hero-text {
+    float: left;
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+    padding: 0px 30px 0px 30px;
+    background-color: #dd8a1c;
+}
+
+.hero h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: .1em;
+}
+
+.hero h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+  
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 20px;
+}
+  
+header nav li {
+    list-style: none;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 3px solid #dd8a1c;
+
+}
+  
+header nav li a {
+    text-decoration: none;
+    color: rgb(248, 250, 251);
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+   /* height: 300px;  Should be removed. Only for demonstration */
+  }
+  
+.left {
+    width: 20%;
+    text-align: right;
+  }
+  
+.right {
+    width: 75%;
+    border-left: 6px solid black;
+  }
+  
+.work {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* Images under the work banner */
+.work-image {
+    display: inline-block;
+    font-family: "Open Sans", Arial;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px;
+    margin: 6px;
+    border: 3px solid black;
+  }
+  
+.work-image:first-child {
+    width: 100%;
+  }
+  
+.work-image:not(:first-child) {
+    flex: 1;
+  }
+
+.work-image:not(:first-child) img {
+    max-width: 100%;
+  }
+
+  .work-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+  }
+
+.work-image {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+.text-tag {
+    position: absolute;
+    bottom: 70px;
+    left: 0px;
+    background-color: #dd8a1c;
+    padding: 10px;
+  }
+
+.work-image img:hover{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: 10px 10px 5px #888888;
+  }
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 10px;
+  }
+
+.right nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 20px;
+}
+  
+.right nav li {
+    list-style: none;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+  
+.right nav li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-bottom: #dd8a1c 3px solid;
+}
+
+#resume .right img {
+    height: 300px;
+}
+
