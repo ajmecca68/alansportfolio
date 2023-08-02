@@ -224,9 +224,11 @@ header nav li a {
 
 .footer h2 {
     font-size: 20px;
+    color: var(--light);
 }
 
 /* Large smartphones - navbar changes color */
+
 @media screen and (max-width: 965px) {
     header {
       flex-direction: column;
@@ -244,7 +246,7 @@ header nav li a {
     }
 
     .hero-text {
-        font-size: 75%;
+        font-size: 65%;
     }
     .work {
         flex-direction: column;
@@ -289,12 +291,3 @@ header nav li a {
     
   }
   
-  @media screen and (max-width: 410px) {
-    .hero-text {
-        font-size: 60%;
-    }
-
-    .hero {
-        height: 100px;
-    }
-  }
