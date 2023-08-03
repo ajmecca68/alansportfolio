@@ -10,3 +10,6 @@ This is my first attempt at a personal website describing my skillset as a full 
 ## Usage
 
 Screenshot of website: [Website screen grab] (./assets/images/screenshot.mov)
+
+## CREDITS
+https://www.w3schools.com/
