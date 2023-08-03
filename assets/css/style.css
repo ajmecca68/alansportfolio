@@ -11,11 +11,11 @@
 body {
     background-color: var(--light);
     overflow: auto;
-    font-family: "Open Sans", Arial;
+    font-family: var(--font);
+    margin: 15px;
 }
 
 main {
-    margin: 15px;
     color: var(--orange);
 }
 
@@ -23,7 +23,7 @@ h2 {
     color: var(--dark);
 }
 
-  /* Displaying header */
+/* Displaying header */
 header {
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ header {
     top: 0;
     z-index: 100;
 }
-  /* setting logo parameters */
+/* setting logo parameters */
 .logo {
     padding-left: 20px;
     background-color: var(--orange);
@@ -45,6 +45,8 @@ header {
     height: 4em;
 
 }
+
+/* Set hero image size */
 
 .hero {
     height: 400px;
@@ -58,25 +60,27 @@ header {
     position: relative;
 }
 
+/* Float text over the hero image - set size and style  */
+
 .hero-text {
     float: left;
     position: absolute;
     right: 0px;
     bottom: 50px;
-    padding: 0px 30px 0px 30px;
+    padding: 20px 30px 20px 30px;
     background-color: var(--orange);
 }
 
 .hero h1 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: .1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1em;
 }
 
 .hero h2 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+/* Header navigation */
   
 header nav ul {
     width: 100%;
@@ -104,12 +108,12 @@ header nav li a {
     padding-top: 150px;
     margin-top: -150px;
 }
+
 /* Create two unequal columns that floats next to each other */
 .column {
     float: left;
     padding: 0px 10px 10px 10px;
-   /* height: 300px;  Should be removed. Only for demonstration */
-  }
+   }
   
 .left {
     width: 20%;
@@ -123,7 +127,8 @@ header nav li a {
     border-left: 6px solid var(--dark);
 
   }
-  
+
+  /* Images under the work banner - flexbox styling*/
 .work {
     display: flex;
     justify-content: space-between;
@@ -131,10 +136,10 @@ header nav li a {
     padding: 10px;
 }
 
-/* Images under the work banner */
+
 .work-image {
     display: inline-block;
-    font-family: "Open Sans", Arial;
+    font-family: var(----font);
     font-size: 20px;
     color: var(--light);
     text-align: center;
@@ -183,7 +188,7 @@ header nav li a {
     height: 300px;
 }
 
-  /* Clear floats after the columns */
+/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -191,6 +196,7 @@ header nav li a {
     margin-bottom: 10px;
   }
 
+/* Styling of contact information*/
 .right nav ul {
     width: 100%;
     display: flex;
@@ -227,46 +233,58 @@ header nav li a {
     color: var(--light);
 }
 
-/* Large smartphones - navbar changes color */
+/*Determined the break point is ~965 so I set media to adjust there*/
 
 @media screen and (max-width: 965px) {
+    /* Changed the header to flex column so the logo appears over the nav bar */
     header {
       flex-direction: column;
       justify-content: center;
     }
     
+    /* adjusted the nav text to fit the smaller screen */
     header nav li {
         font-size: 100%;
         font-weight: bold;
         border-bottom: 3px solid var(--orange);
     
     }
+
+    /* adjusted the hero height so as not to take up too much real estate */
     .hero {
         height: 200px;
     }
-
+    /* Adjusted the text on the hero image to fit */
     .hero-text {
         font-size: 65%;
+        padding: 10px 20px 10px 20px;
+
     }
+
+    /* The work images needed to be adjusted to column */
     .work {
         flex-direction: column;
-
     }
 
+    /* Adjusted the work image to fit correctly in the smaller frame */
     .work-image {
         margin-left: 0px;
         width: 100%;
     }
-
-    .work-image img {
-        width: 100%;
-        height: 100%;
-        border-radius: 6px;
-        opacity: .8;
-      }
     
-    .right nav ul {
+    /* moved the vertical rule to horizontal */
+    .right {
+        border-left: none;
+        border-top: 6px solid var(--dark);
+        text-align: center;
         width: 100%;
+        padding: 0px;
+        color: var(--dark);
+    }
+
+    /* adjusted the nav sizing */
+    .right nav ul {
+        width: 100%;    
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -278,15 +296,7 @@ header nav li a {
         text-align: center;
         vertical-align: top;
       }
-    
-    .right {
-        border-left: none;
-        border-top: 6px solid var(--dark);
-        text-align: center;
-        width: 100%;
-        padding: 0px;
-        color: var(--dark);
-    }
+
 
     
   }
